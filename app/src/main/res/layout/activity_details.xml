@@ -338,8 +338,7 @@
         android:layout_alignParentBottom="true"
         android:background="#FFF176"
         android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/event_location"
