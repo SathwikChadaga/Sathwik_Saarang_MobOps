@@ -1,15 +1,22 @@
 package com.example.android.sathwik_saarang_mobops;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.CalendarContract;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -26,6 +33,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Set;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -37,15 +45,23 @@ public class DetailsActivity extends AppCompatActivity {
     public String[] subevents = {"lightmusic", "lightmusic", "westernmusic", "westernmusic", "choreo"};
 
 
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+//Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_details);
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+
+
 
         //Get intent:
         Intent intent = getIntent();
         title = intent.getStringExtra(MainActivity.EXTRA_MESSAGE1);
+        collapsingToolbarLayout.setTitle(title);
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
 
         timeAMPM = intent.getIntExtra("timeAMPM", 0);
         timeDate = intent.getIntExtra("date", 0);
@@ -62,8 +78,8 @@ public class DetailsActivity extends AppCompatActivity {
         coordinates = intent.getStringExtra(MainActivity.EXTRA_MESSAGE9);
         position = intent.getIntExtra("positionint", 0);
 
-        //Initiate TextView and ImageView:
-        TextView eventTextView = (TextView) findViewById(R.id.event_text);
+//        Initiate TextView and ImageView:
+
         TextView eventTime = (TextView) findViewById(R.id.event_time);
         TextView eventVenue = (TextView) findViewById(R.id.event_venue);
         TextView eventDescription = (TextView) findViewById(R.id.event_description);
@@ -72,8 +88,8 @@ public class DetailsActivity extends AppCompatActivity {
         TextView eventMail = (TextView) findViewById(R.id.event_mail_id);
         ImageView eventImage = (ImageView) findViewById(R.id.event_image);
 
-        //Set different values, based on values got through getIntent:
-        eventTextView.setText(title);
+//        Set different values, based on values got through getIntent:
+
 
         //String ampm: to decide whether AM or PM
         String ampm;
@@ -91,6 +107,8 @@ public class DetailsActivity extends AppCompatActivity {
         eventCoord.setText(coordName + "\n" + contact);
         eventMail.setText(emailId);
         eventImage.setImageResource(imageId);
+
+
 
     }
 
