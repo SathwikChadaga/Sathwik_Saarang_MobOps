@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#FFF9C4"
+
+        android:orientation="vertical"
+
+        tools:context="com.example.android.sathwik_saarang_mobops.RegisterActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/register_saarang_background"
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/saarang"
+                android:tint="#80000000" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+
+                android:paddingBottom="24dp"
+
+                android:text="Registrations"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp" />
+
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/first_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+
+            android:hint="First Name"
+            android:inputType="textPersonName"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+
+        <EditText
+            android:id="@+id/last_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+        <EditText
+            android:id="@+id/email_edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+        <EditText
+            android:id="@+id/phone_edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+
+            android:ems="10"
+            android:hint="Phone"
+            android:inputType="phone"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+        <EditText
+            android:id="@+id/school_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+
+            android:hint="School/College Name"
+            android:inputType="textCapWords"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+        <Spinner
+            android:id="@+id/event_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="32dp"
+
+            android:onClick="submitInfo"
+
+            android:text="Submit"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+</ScrollView>

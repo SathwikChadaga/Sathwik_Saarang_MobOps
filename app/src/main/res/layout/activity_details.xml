@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/alankar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            tools:context="com.example.android.sathwik_saarang_mobops.DetailsActivity">
+
+            <ImageView
+                android:id="@+id/event_image"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+
+                android:contentDescription="eventImage"
+                android:scaleType="centerCrop"
+                android:src="@drawable/saarang_alankar"
+                android:tint="#50000000" />
+
+            <TextView
+                android:id="@+id/event_venue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/event_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+
+                android:layout_marginLeft="104dp"
+
+                android:background="@android:color/transparent"
+                android:text="Central Lecture Theatre"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/event_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_above="@id/event_venue"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginLeft="104dp"
+
+                android:background="@android:color/transparent"
+                android:text="2nd January, 4:30 PM"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/event_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_above="@id/event_time"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginLeft="104dp"
+
+                android:background="@android:color/transparent"
+                android:text="Alankar"
+                android:textColor="#FFFFFF"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/event_about_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_below="@id/event_image"
+
+                android:background="#FFF9C4"
+                android:gravity="center_vertical"
+
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+
+                android:text="About"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/event_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/event_about_title"
+
+                android:background="#FFD740"
+                android:gravity="center_vertical"
+
+                android:paddingBottom="16dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:paddingTop="16dp"
+
+
+                android:text="Introducing our one and only solo singing competition Alankar where you can battle it out with over a hundred vocalists while being judged by the best singing talents out there."
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/event_prize"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/event_description"
+
+                android:layout_marginTop="0.001dp"
+
+                android:background="#FFD740"
+
+                android:gravity="center"
+                android:minHeight="72dp"
+
+                android:text="Prize money worth 15,000 INR"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/event_contact_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+
+                android:layout_below="@id/event_prize"
+
+                android:background="#FFF9C4"
+                android:gravity="center_vertical"
+
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+
+                android:text="Contact"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/event_contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/event_contact_title"
+
+                android:layout_marginBottom="0.01dp"
+
+                android:background="#FFD740"
+                android:minHeight="72dp"
+
+                android:onClick="callCore">
+
+                <TextView
+                    android:id="@+id/event_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="left"
+
+                    android:onClick="callCore"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="72dp"
+                    android:paddingRight="16dp"
+
+                    android:paddingTop="16dp"
+                    android:text="Sathwik Chadaga
+7734015693"
+                    android:textColor="#000000"
+
+                    android:textSize="16sp" />
+
+
+                <ImageView
+                    android:id="@+id/event_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="16dp"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_phone_white_24dp"
+                    android:tint="#FFA726" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/event_mail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/event_contact_layout"
+
+                android:background="#FFD740"
+                android:minHeight="72dp"
+
+                android:onClick="mailOnClick">
+
+                <TextView
+                    android:id="@+id/event_mail_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_centerVertical="true"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="left"
+
+                    android:onClick="mailOnClick"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="72dp"
+                    android:paddingRight="16dp"
+
+                    android:paddingTop="16dp"
+                    android:text="chadagasathwik@gmail.com"
+                    android:textColor="#000000"
+
+                    android:textSize="16sp" />
+
+
+                <ImageView
+                    android:id="@+id/event_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="16dp"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_email_white_24dp"
+                    android:tint="#FFA726" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/event_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/event_mail_layout"
+
+                android:background="#FFF9C4"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+
+                android:padding="8dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/event_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+
+                    android:layout_gravity="bottom|end"
+
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+
+                    android:onClick="mapOnClick"
+
+                    android:src="@android:drawable/ic_dialog_map"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="#FF9800" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/event_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+
+                    android:layout_gravity="bottom|end"
+
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+
+                    android:onClick="calendarOnClick"
+                    android:src="@drawable/ic_event_white_24dp"
+                    app:backgroundTint="#FF9800" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/event_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+
+                    android:layout_gravity="bottom|end"
+
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="8dp"
+
+                    android:onClick="shareOnClick"
+
+                    android:src="@drawable/ic_share_white_24dp"
+
+                    app:backgroundTint="#FF9800" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="@android:color/white"
+            app:backgroundTint="#FF9800"
+            android:onClick="registerForEvent"
+            app:layout_anchor="@id/event_image"
+            app:layout_anchorGravity="bottom|right|end" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

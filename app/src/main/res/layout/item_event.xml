@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:paddingBottom="1dp">
+
+    <ImageView
+        android:id="@+id/image_saarang_background"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/saarang"
+        android:tint="#80000000" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/text_decibels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+
+            android:text="Decibels"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/text_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/text_decibels"
+            android:layout_centerHorizontal="true"
+
+            android:text="Event"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
