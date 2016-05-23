@@ -45,7 +45,6 @@ public class DetailsActivity extends AppCompatActivity {
     public String[] subevents = {"lightmusic", "lightmusic", "westernmusic", "westernmusic", "choreo"};
 
 
-    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -80,6 +79,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 //        Initiate TextView and ImageView:
 
+        TextView textView = (TextView) findViewById(R.id.tv);
         TextView eventTime = (TextView) findViewById(R.id.event_time);
         TextView eventVenue = (TextView) findViewById(R.id.event_venue);
         TextView eventDescription = (TextView) findViewById(R.id.event_description);
@@ -90,6 +90,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 //        Set different values, based on values got through getIntent:
 
+        textView.setText(title);
 
         //String ampm: to decide whether AM or PM
         String ampm;
